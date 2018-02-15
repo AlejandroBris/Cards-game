@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Card game</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+</head>
+<body>
+	<h1>Make pairs</h1>
+	<div id="cards-container">
+	</div>
+	<img id="carta1" class="card" src="cards/reverse.png">
+	<img id="carta2" class="card" src="cards/reverse.png">
+	<img id="carta3" class="card" src="cards/reverse.png">
+	<img id="carta4" class="card" src="cards/reverse.png">
+	<img id="carta5" class="card" src="cards/reverse.png">
+	<img id="carta6" class="card" src="cards/reverse.png">
+	<img id="carta7" class="card" src="cards/reverse.png">
+	<img id="carta8" class="card" src="cards/reverse.png">
+	<img id="carta9" class="card" src="cards/reverse.png">
+	<img id="carta10" class="card" src="cards/reverse.png">
+	<img id="carta11" class="card" src="cards/reverse.png">
+	<img id="carta12" class="card" src="cards/reverse.png">
+	<img id="carta13" class="card" src="cards/reverse.png">
+	<img id="carta14" class="card" src="cards/reverse.png">
+	<img id="carta15" class="card" src="cards/reverse.png">
+	<img id="carta16" class="card" src="cards/reverse.png">
+	<img id="carta17" class="card" src="cards/reverse.png">
+	<img id="carta18" class="card" src="cards/reverse.png">
+	<img id="carta19" class="card" src="cards/reverse.png">
+	<img id="carta20" class="card" src="cards/reverse.png">
+
+	<script type="text/javascript">
+		var click;
+		var nClicks = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+		var click1;
+		var click2;
+		var listaImagenes=["card1","card2","card3","card4","card5","card6","card7","card8","card9","card10","card1","card2","card3","card4","card5","card6","card7","card8","card9","card10"];
+     
+		$("#carta1").click(function(){
+			click=1;
+			nClicks[0]=1;
+			volverCarta();
+			if(comprobarClicks()){eliminar(click1,click2);}
+		})
+		$("#carta2").click(function(){
+			click=2;
+			nClicks[1]=1;
+			volverCarta();
+			if(comprobarClicks()){eliminar(click1,click2);}
+		})
+		$("#carta3").click(function(){
+			click=3;
+			nClicks[2]=1;
+			volverCarta();
+			if(comprobarClicks()){eliminar(click1,click2);}
+		})
+		$("#carta4").click(function(){
+			click=4;
+			nClicks[3]=1;
+			volverCarta();
+			if(comprobarClicks()){eliminar(click1,click2);}
+		})
+		$("#carta5").click(function(){
+			click=5;
+			nClicks[4]=1;
+			volverCarta();
+			if(comprobarClicks()){eliminar(click1,click2);}
+		})
+		$("#carta6").click(function(){
+			click=6;
+			nClicks[5]=1;
+			volverCarta();
+			if(comprobarClicks()){eliminar(click1,click2);}
+		})
+		$("#carta7").click(function(){
+			click=7;
+			nClicks[6]=1;
+			volverCarta();
+			if(comprobarClicks()){eliminar(click1,click2);}
+		})
+		$("#carta8").click(function(){
+			click=8;
+			nClicks[7]=1;
+			volverCarta();
+			if(comprobarClicks()){eliminar(click1,click2);}
+		})
+		$("#carta9").click(function(){
+			click=9;
+			nClicks[8]=1;
+			volverCarta();
+			if(comprobarClicks()){eliminar(click1,click2);}
+		})
+		$("#carta10").click(function(){
+			click=10;
+			nClicks[9]=1;
+			volverCarta();
+			if(comprobarClicks()){eliminar(click1,click2);}
+		})
+		$("#carta11").click(function(){
+			click=11;
+			nClicks[10]=1;
+			volverCarta();
+			if(comprobarClicks()){eliminar(click1,click2);}
+		})
+		$("#carta12").click(function(){
+			click=12;
+			nClicks[11]=1;
+			volverCarta();
+			if(comprobarClicks()){eliminar(click1,click2);}
+		})
+		$("#carta13").click(function(){
+			click=13;
+			nClicks[12]=1;
+			volverCarta();
+			if(comprobarClicks()){eliminar(click1,click2);}
+		})
+		$("#carta14").click(function(){
+			click=14;
+			nClicks[13]=1;
+			volverCarta();
+			if(comprobarClicks()){eliminar(click1,click2);}
+		})
+		$("#carta15").click(function(){
+			click=15;
+			nClicks[14]=1;
+			volverCarta();
+			if(comprobarClicks()){eliminar(click1,click2);}
+		})
+		$("#carta16").click(function(){
+			click=16;
+			nClicks[15]=1;
+			volverCarta();
+			if(comprobarClicks()){eliminar(click1,click2);}
+		})
+		$("#carta17").click(function(){
+			click=17;
+			nClicks[16]=1;
+			volverCarta();
+			if(comprobarClicks()){eliminar(click1,click2);}
+		})
+		$("#carta18").click(function(){
+			click=18;
+			nClicks[17]=1;
+			volverCarta();
+			if(comprobarClicks()){eliminar(click1,click2);}
+		})
+		$("#carta19").click(function(){
+			click=19;
+			nClicks[18]=1;
+			volverCarta();
+			if(comprobarClicks()){eliminar(click1,click2);}
+		})
+		$("#carta20").click(function(){
+			click=20;
+			nClicks[19]=1;
+			volverCarta();
+			if(comprobarClicks()){eliminar(click1,click2);}
+		})
+		
+
+		function getSum(total, num) {
+    		return total + num;
+		}
+		
+
+		function volverCarta() {
+			for(var i=0;i<listaImagenes.length; i++){
+				if(i==click-1){
+					$("#carta"+click).replaceWith('<img id="carta'+click+'" class="card" src="cards/'+listaImagenes[i]+'.png">');
+					console.log(i);
+					
+				}
+				
+			}
+		}
+
+		function restaurar(click1,click2){
+			$("#carta"+click1).replaceWith('<img id="carta'+click1+'" class="card" src="cards/reverse.png">');
+			$("#carta"+click2).replaceWith('<img id="carta'+click2+'"class="card" src="cards/reverse.png">');
+			$("#carta"+click1).click(function(){
+					click=click1;
+					nClicks[click1-1]=1;
+					volverCarta();
+					if(comprobarClicks()){eliminar(click1,click2);}
+			})
+			$("#carta"+click2).click(function(){
+					click=click2;
+					nClicks[click2-1]=1;
+					volverCarta();
+					if(comprobarClicks()){eliminar(click1,click2);}
+			})
+		}
+
+		function comprobarClicks(){
+			var par=nClicks.reduce(getSum);
+			console.log(par);
+			if(par==1){click1=click;
+				return false;
+			}
+			
+			if(par==2){
+				click2=click;
+				console.log(listaImagenes[click1-1]+', '+listaImagenes[click2-1])
+				nClicks=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+				if(listaImagenes[click1-1]==listaImagenes[click2-1]){
+					return true;
+				}
+				else{restaurar(click1,click2);
+					return false;
+				}
+			}
+
+		}
+
+		function eliminar(click1,click2){
+			
+				$("#carta"+click1).remove();
+				$("#carta"+click2).remove();
+			
+		}
+	</script>
+</body>
+</html>
