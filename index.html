@@ -41,6 +41,7 @@
 		var click2;
 		var listaImagenes=["card1","card2","card3","card4","card5","card6","card7","card8","card9","card10","card1","card2","card3","card4","card5","card6","card7","card8","card9","card10"];
      
+		
 		$("#carta1").click(function(){
 			click=1;
 			nClicks[0]=1;
@@ -171,8 +172,9 @@
 		function volverCarta() {
 			for(var i=0;i<listaImagenes.length; i++){
 				if(i==click-1){
-					$("#carta"+click).replaceWith('<img id="carta'+click+'" class="card" src="cards/'+listaImagenes[i]+'.png">');
-					console.log(i);
+					$("#carta"+click).attr("src",'cards/'+listaImagenes[i]+'.png');
+					//$("#carta"+click).replaceWith('<img id="carta'+click+'" class="card" src="cards/'+listaImagenes[i]+'.png">');
+					//console.log(i);
 					
 				}
 				
@@ -180,20 +182,8 @@
 		}
 
 		function restaurar(click1,click2){
-			$("#carta"+click1).replaceWith('<img id="carta'+click1+'" class="card" src="cards/reverse.png">');
-			$("#carta"+click2).replaceWith('<img id="carta'+click2+'"class="card" src="cards/reverse.png">');
-			$("#carta"+click1).click(function(){
-					click=click1;
-					nClicks[click1-1]=1;
-					volverCarta();
-					if(comprobarClicks()){eliminar(click1,click2);}
-			})
-			$("#carta"+click2).click(function(){
-					click=click2;
-					nClicks[click2-1]=1;
-					volverCarta();
-					if(comprobarClicks()){eliminar(click1,click2);}
-			})
+			$("#carta"+click1).attr("src","cards/reverse.png");
+			$("#carta"+click2).attr("src","cards/reverse.png");
 		}
 
 		function comprobarClicks(){
@@ -218,7 +208,7 @@
 		}
 
 		function eliminar(click1,click2){
-			
+			    console.log(click1+', '+click2)
 				$("#carta"+click1).remove();
 				$("#carta"+click2).remove();
 			
